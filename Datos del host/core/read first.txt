@@ -1,0 +1,4 @@
+this is a javascript framework created by james jara..
+keep this structure
+
+if you want to create modules add in modules root

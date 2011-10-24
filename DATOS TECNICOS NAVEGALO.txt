@@ -1,0 +1,69 @@
+============================================================================================================
+CONEXION:
+
+on true: buscar texto (Cerrar Sesión) Si existe estamos dentro
+on false: busca texto (REGISTRA UNA CUENTA) si existe contraseña incorrecta
+URL: http://www.navegalo.com/sms/loginsc.php?user=jamesjara&pass=---------&Submit=Ingresar
+URL: http://www.navegalo.com/sms/core/acciones.php?inicio=1&idUser=159486
+
+
+============================================================================================================
+CONTACTOS
+
+
+AGREGAR
+URL:  http://www.navegalo.com/sms/core/acciones.php?nom=NOMBRE&tel=NUMERO&addAgen=Agregar
+
+VER -> EXTRAER - se debe buscar en el texto
+URL: http://www.navegalo.com/sms/inContactos.php
+<td bgcolor="#F8F8FF"><a href="javascript:ag('-----BUSCAR AKI NUMERO------');" class="style9"><font color="#000D39" size="2" face="Verdana">------BUSCAR AQUI NOMBRE-----</font></a><font size="2" face="Verdana"></font></td>
+<td bgcolor="#F8F8FF"><div align="center" class="style9"><font size="2" face="Verdana">88992322</font></div></td>
+<td bgcolor="#F8F8FF"><div align="center" class="style9"><a href="core/acciones.php?del=---------BUSCAAR AQUI ID DE NUMERO------------&delAgen=1"><font size="2" face="Verdana">Borrar</font></a></div></td>
+</tr>
+
+ELIMINAR
+URL:  http://www.navegalo.com/sms/core/acciones.php?del=---------BUSCAAR AQUI ID DE NUMERO------------&delAgen=1
+
+=============================================================================================================
+MENSAJES ENVIADOS
+
+VER -> EXTRAER - se debe buscar en el texto
+URL: http://www.navegalo.com/sms/inMensajes.php?idUser=------ID DEL USUARIO-------&userAct=-----USERNAME----&foot=Hosting%20y%20dominios%20-%20Racklodge.com
+<font face="Verdana" size="2">
+	---------NUMERO---------- => -------mensaje enviado-----------<br><br>																																																			
+			</font>
+
+=============================================================================================================
+RECORDATORIOS
+nota:envia 1 mensaje recordatorio a su propio celular
+
+EXTRAER -> GENERAR MAPA -> 
+http://www.navegalo.com/sms/agenda.php?d=31&m=12&y=2009<---------dias
+DIAS CON RECORDATORIO-> <td class="dia tit2" align="center"><a href="--------esta es la url + lo que sig -----?d=30&amp;m=12&amp;y=2009"> <font face="Verdana" size="2">30</font></a></td>
+DIAS SIN RECORDATORIO->	si no contiene son normales
+
+VER-> EXTRAER X DIA...
+<tr valign="top">
+<th class="di STYLE7" align="left" width="15%"> <font face="Verdana" size="2"> -------------------HORA------------------------- </font></th>
+<td class="aviso" align="left" width="68%"><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif"> ----------mensaje---------------- </font></td>
+<td class="aviso" align="right" width="17%"><font face="Verdana" size="2"><img src="images/tel_new.gif" border="0" height="25" width="25">
+&nbsp; 
+<a href="------------LINK DE BORRAR-------------------core/acciones.php?d=31&amp;m=12&amp;y=2009&amp;did=12560&amp;sms=1507392713" class="links">
+<img src="images/delete_new.gif" alt="Eliminar recordatorio" style="" border="0" height="25" width="25">
+</a>
+&nbsp;&nbsp; 
+<a href="------------LINK DE ACTUALIZAR-------------------?d=31&amp;m=12&amp;y=2009&amp;eid=12560" class="links">
+<img src="images/pregunta_new.gif" alt="Actualizar Información" border="0" height="25" width="25">
+</a>
+</font></td>
+</tr>
+
+AGREGAR
+ENVIAR POR GET->http://www.navegalo.com/sms/core/acciones.php?--------DIA-MES-AÑO--------------------d=25&m=12&y=2009&add=1
+ENVIAR POST AL MISMO TIEMPO -> hora=---HORA----&minutos=---MINUTOS-----&ampm=----AM-PM------&texto=-------texto----------&sms=1&minsantes=--------MINUTOS ANTES-----------------&edid=&smsid=&modificarRec=0&celular=-----------CELULAR-----------&B2=Agregar
+
+=============================================================================================================
+ENVIAR MENSAJES!
+url:http://www.navegalo.com/sms/core/acciones.php
+post: footer=------PAGINA WEB----------&count=17&insertaMensaje=1&smsMsg=---------MENSAJE AQUI-------------&disponible=17+de+116+caracteres&pais=Costa+Rica&proveedor=103&area=&numtelefono=--------TELEFONO----------&Enviar2=Enviar
+
